@@ -46,6 +46,7 @@ Custom encoder for a struct (or union):
 const Struct = struct {
 	a: u8,
 
+	// You better hope to not typo this function name/args/visibility ;)
 	pub fn scaleEncode(self: *const @This(), writer: anytype) !void {
 		try writer.write(123);
 		try writer.write(self.a);
