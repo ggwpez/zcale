@@ -1,7 +1,7 @@
 const std = @import("std");
 const native_endian = @import("builtin").target.cpu.arch.endian();
 
-/// Compact encoding or an `u8`, `u16`, or `u32`.
+/// Compact encoding of an `u8`, `u16`, or `u32`.
 ///
 /// Example:
 /// ```zig
