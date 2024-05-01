@@ -23,6 +23,8 @@ scale.write(0x12345678);
 
 // Encode a compact integer:
 scale.writeCompactU32(0x12345678);
+// Encode a compact integer by using the Compact wrapper:
+scale.write(Compact{ .U16 = 0x1234 });
 
 // Encode a struct:
 const Struct = struct {
