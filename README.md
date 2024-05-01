@@ -27,14 +27,13 @@ scale.writeCompactU32(0x12345678);
 scale.write(Compact{ .U16 = 0x1234 });
 
 // Encode a struct:
-const Struct = struct {
-	a: u8,
-	b: u16,
-	c: u32,
+const RGB = struct {
+	r: u8,
+	g: u8,
+	b: u8,
 };
 
-var s = Struct{ .a = 1, .b = 2, .c = 3 };
-scale.write(s);
+scale.write(RGB{ .a = 100, .b = 200, .c = 100 });
 
 // Also works for slices, options, enums etc:
 scale.write([_]u8{1, 2, 3, 4});
